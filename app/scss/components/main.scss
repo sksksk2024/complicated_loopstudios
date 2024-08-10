@@ -1,0 +1,669 @@
+@use '../util/' as *;
+
+.main {
+  @apply flex justify-center align-middle flex-col;
+  padding: 200px 5px;
+  padding-top: 100px;
+  background-color: var(--white);
+
+  .leader {
+
+    &__img {
+      display: block;
+      margin: 0 auto;
+    }
+    
+    &__info {
+    }
+  }
+  
+  .creations {
+    
+    span {
+      text-shadow: -7px -9px 8px rgb(0, 0, 0);
+      box-shadow: -7px -15px 13px rgba(0,0,0,.9);
+      position: relative;
+      background-color: rgba(1,0,0,.8);
+      padding: rem(10);
+    }
+    
+    span::before,
+    span::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+      z-index: -1; /* Place behind the text */
+    }
+    
+    span::before {
+      transform: translateY(-10px); /* Move shadow up */
+    }
+    
+    span::after {
+      transform: translateY(20px); /* Move shadow down */
+    }
+
+    h2 {
+      margin-top: rem(150);
+    }
+
+    &__part1 {
+
+      /* Container for the square and overlay */
+      &--square1 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square1 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-deep-earth.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square1 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square1 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square1:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+
+
+      &--square2 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square2 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-night-arcade.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square2 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square2 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square2:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+
+
+      &--square3 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square3 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-soccer-team.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square3 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square3 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square3:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+
+
+      &--square4 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square4 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-grid.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square4 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square4 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square4:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+
+     
+    }
+
+    &__part2 {
+
+      &--square5 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square5 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-from-above.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square5 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square5 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square5:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+
+
+      &--square6 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square6 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-pocket-borealis.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square6 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square6 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square6:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+
+
+      &--square7 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square7 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-curiosity.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square7 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square7 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square7:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+
+
+      &--square8 {
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 50px;
+        overflow: hidden; /* Ensure no overflow of content */
+      }
+
+      /* Background image and overlay */
+      &--square8 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../../../app/images/mobile/image-fisheye.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        z-index: 1;
+      }
+
+      /* Overlay to adjust opacity */
+      &--square8 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+        z-index: 2;
+      }
+
+      /* Text styling */
+      &--square8 .names {
+        position: relative;
+        font-size: rem(40);
+        font-weight: 300;
+        font-family: var(--jose);
+        text-transform: uppercase;
+        top: 80px;
+        left: 30px;
+        z-index: 3; /* Ensure text is above the overlay */
+      }
+
+      /* Hover effect */
+      &--square8:hover .background {
+        opacity: 0.7; /* Adjust hover opacity level as needed */
+      }
+    }
+
+    @media (min-width: 694px) {
+    }
+  }
+
+  button {
+    margin: 0 auto; /* Center within the flexbox container */
+    border: 1px solid var(--black);
+    padding: 10px;
+    color: var(--black);
+    letter-spacing: 2px;
+    background-color: var(--white);
+    text-transform: uppercase;
+    cursor: pointer;
+    width: rem(150);
+    transition: 150ms ease-in-out;
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--black);
+    }
+  }
+
+  @media (min-width: 71.875em) {
+    .leader {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+
+      &__info {
+        position: relative;
+        top: rem(180);
+        right: rem(134);
+        background-color: white;
+        width: rem(500);
+        height: rem(320);
+      }
+    }
+
+    .creations {
+
+      h2 {
+        margin-top: rem(200);
+        position: relative;
+        right: 370px;
+      }
+
+      &__part1 {
+        display: flex;
+        justify-content: center;
+        gap: rem(20);
+        margin: 0 auto;
+
+  
+        /* Background image and overlay */
+        &--square1 .background {
+          background-image: url(./../../../app/images/desktop/image-deep-earth.jpg);
+        }
+
+        &--square1 {
+          .names {
+            top: rem(380);
+          }
+
+          height: rem(500);
+          width: rem(250);
+          //background-image: url(./../../../app/images/desktop/image-deep-earth.jpg);
+        }
+
+
+        &--square2 .background {
+          background-image: url(./../../../app/images/desktop/image-night-arcade.jpg);
+        }
+
+        &--square2 {
+          .names {
+            top: rem(380);
+          }
+
+          height: rem(500);
+          width: rem(250);
+        }
+
+
+        &--square3 .background {
+          background-image: url(./../../../app/images/desktop/image-soccer-team.jpg);
+        }
+
+        &--square3 {
+          .names {
+            top: rem(380);
+          }
+
+          height: rem(500);
+          width: rem(250);
+        }
+
+
+        &--square4 .background {
+          background-image: url(./../../../app/images/desktop/image-grid.jpg);
+        }
+
+        &--square4 {
+          .names {
+            top: rem(380);
+          }
+          
+          height: rem(500);
+          width: rem(250);
+        }
+      }
+
+      &__part2 {
+        display: flex;
+        justify-content: center;
+        gap: rem(20);
+        margin: 0 auto;
+
+
+        &--square5 .background {
+          background-image: url(./../../../app/images/desktop/image-from-above.jpg);
+        }
+
+        &--square5 {
+          .names {
+            top: rem(380);
+          }
+
+          height: rem(500);
+          width: rem(250);
+        }
+
+
+        &--square6 .background {
+          background-image: url(./../../../app/images/desktop/image-pocket-borealis.jpg);
+        }
+
+        &--square6 {
+          .names {
+            top: rem(380);
+            left: 15px;
+          }
+
+          height: rem(500);
+          width: rem(250);
+        }
+
+
+        &--square7 .background {
+          background-image: url(./../../../app/images/desktop/image-curiosity.jpg);
+        }
+
+        &--square7 {
+          .names {
+            top: rem(380);
+            left: 15px;
+          }
+
+          height: rem(500);
+          width: rem(250);
+        }
+
+
+        &--square8 .background {
+          background-image: url(./../../../app/images/desktop/image-fisheye.jpg);
+        }
+
+        &--square8 {
+          .names {
+            top: rem(380);
+          }
+
+          height: rem(500);
+          width: rem(250);
+        }
+      }
+    }
+    button {
+      position: relative;
+      bottom: 73rem;
+      left: rem(455);
+    }
+  }
+
+}

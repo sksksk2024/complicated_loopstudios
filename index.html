@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./app/images/favicon-32x32.png">
+  
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Manrope:wght@700&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Manrope:wght@700&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./dist/style.css">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <!-- Header Section -->
+   <header class="header">
+
+    <!-- Where the logo and the hamburger menu and its functions stay-->
+    <div class="header__container">
+        <img class="header__container--logo1" src="./app/images/logo.svg" alt="logo">
+
+        <input type="checkbox" id="menu-toggle" hidden> <!--HACK-->
+        <div class="header__container--hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        <ul class="header__container--list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </div>
+
+    <!-- The big title -->
+    <section class="header__big">
+        <h1>Immersive</h1>
+        <h1>Experiences</h1>
+        <h1>That</h1>
+        <h1>Deliver</h1>
+    </section>
+        
+   </header>
+
+   <!-- Main Section -->
+    <main class="main">
+
+        <!-- The first part of the main-->
+        <section class="leader">
+            <img class="leader__img" src="./app/images/desktop/image-interactive.jpg" alt="leader_image">
+
+            <div class="leader__info">
+                <h2>The leader in interactive VR</h2>
+                <p>
+                    Founded in 2011, Loopstudios has been producing world-class virtual reality 
+                    projects for some of the best companies around the globe. Our award-winning 
+                    creations have transformed businesses through digital experiences that bind 
+                    to their brand.
+                </p>
+            </div>
+        </section>
+
+        <!-- The second part of the main-->
+        <section class="creations">
+            <h2>Our creations</h2>
+            <div class="creations__part1">
+                <div class="creations__part1--square1">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">Deep</span><br>
+                    <span class="names">earth</span>
+                </div>
+
+                <div class="creations__part1--square2">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">Night</span><br>
+                    <span class="names">arcade</span>
+                </div>
+
+                <div class="creations__part1--square3">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">Soccer</span><br>
+                    <span class="names">team VR</span>
+                </div>
+
+                <div class="creations__part1--square4">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">The</span><br>
+                    <span class="names">grid</span>
+                </div>
+            </div>
+
+            <div class="creations__part2">
+                <div class="creations__part2--square5">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">From up</span><br>
+                    <span class="names">above V</span>
+                </div>
+
+                <div class="creations__part2--square6">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">Pocket</span><br>
+                    <span class="names">borealis</span>
+                </div>
+
+                <div class="creations__part2--square7">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">The</span><br>
+                    <span class="names">curiosity</span>
+                </div>
+
+                <div class="creations__part2--square8">
+                    <div class="background"></div>
+                    <div class="overlay"></div>
+                    <span class="names">Make it</span><br>
+                    <span class="names">fisheye</span>
+                </div>
+
+            </div>
+        </section>
+        
+        <button>See all</button>
+
+    </main>
+
+
+    <!-- Footer Section-->
+    <footer class="[ footer__container ]">
+        <!-- The first 2 elements-->
+        <div class="[ footer__wrapper ]">
+            <img class="logo2" src="./app/images/logo.svg" alt="">
+    
+            <ul class="footer__list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <!-- The last 2 elements-->
+         <div class="[ footer__wrapper ]">
+             <div class="[ footer__social ]">
+                 <img class="[ footer__facebook ]" src="./app/images/icon-facebook.svg" alt="facebook">
+                 <img class="[ footer__twitter ]" src="./app/images/icon-twitter.svg" alt="twitter">
+                 <img class="[ footer__pinterest ]" src="./app/images/icon-pinterest.svg" alt="pinterest">
+                 <img class="[ footer__instagram ]" src="./app/images/icon-instagram.svg" alt="instagram">
+             </div>
+     
+             <p class="copyright">
+                 © 2021 Loopstudios. All rights reserved.
+             </p>
+         </div>
+    </footer>
+
+
+  <script src="./app/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@use '../util/' as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0 5px;
+  list-style: none;
+  font-size: rem(18);
+  color: var(--white);
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--alata);
+  min-height: 120vh;
+  /*how much to scroll*/
+  background-color: var(--black);
+}
+  
+img {
+  max-width: 100%;
+
+}
+
+//Typography
+//h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4.125rem;
+  font-weight: 300;
+  font-family: var(--jose);
+
+  @media (max-width: 33.75em) {
+    font-size: 2rem;
+  }
+}
+
+
+h2 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: rem(40);
+  margin-bottom: rem(24);
+  color: var(--black);
+  font-family: var(--jose);
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  // color: var(--white);
+}
+
+br {
+  margin-top: rem(5);
+  margin-bottom: rem(0);
+}
+
+ul {
+  margin-left: rem(50);
+  margin-top: rem(50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // gap: rem(30);
+}
+
+li {
+  transition: 2s ease;
+  margin-bottom: 32px;
+}
+
+li:hover {
+  border-bottom: 1px solid var(--white);
+  width: fit-content;
+}
+
+@media (max-width: 694px) {
+  .header__container--list li {
+    display: flex;
+    position: relative;
+    bottom: -200px;
+    right: 120px;
+  }
+}
+
+@media (min-width: 43.4375em) {
+  ul {
+    flex-direction: row;
+    gap: 0;
+    margin: 0;
+    margin-bottom: -43px;
+  }
+}

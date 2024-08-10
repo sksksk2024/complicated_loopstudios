@@ -1,0 +1,153 @@
+@use '../util/' as *;
+
+.header__container--hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.header__container--hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+.header__container--hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  background-image: url(./../../../app/images/mobile/image-hero.png);
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  object-fit: cover;
+  background-repeat:no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  max-height: 1200px;
+
+  &__container {
+    position: relative; /* Ensure it’s positioned relative to the page */
+    z-index: 999; /* Ensure it has a lower z-index than the menu */
+    padding: rem(40) rem(20);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    &--logo1 {
+      z-index: 1001;
+      grid-column: 3 / 1;
+      height: 100%;
+      width: 100%;
+      
+      @media (min-width: 33.125em) {
+        grid-column: 3 / 1;
+      }
+    }
+
+    #menu-toggle:checked + &--list {
+      display: flex;
+    }
+
+    &--hamburger {
+      z-index: 1001;
+      grid-column: 5;
+      cursor: pointer;
+
+      // position: relative;
+      //width: 26px;
+      //height: 20px; /* Adjusted height to make room for the transformations */
+
+      .line {
+        display: block;
+        margin-bottom: 6px;
+        width: 26px;
+        height: 2px;
+        background-color: var(--white);
+        border-radius: 2px; /* Rounded edges for a smoother look */
+        transition: all 0.3s ease; /* For smooth transitions on hover/click */
+      }
+
+    }
+
+    &--hamburger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+    &--hamburger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+    &--hamburger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+    
+
+    &--list {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      
+      @media (max-width: 43.375em) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black);
+        padding: 2rem;
+        z-index: 1000;
+        overflow-y: auto;
+
+      }
+    }
+
+    &--list.active {
+      margin: 0;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      overflow: hidden;
+    }
+
+  }
+
+  &__big {
+    align-items: center;
+    padding: rem(20);
+    margin-top: rem(89);
+    margin-bottom: rem(100);
+
+    width: 100%;
+    border: 5px solid var(--white);
+    text-transform: uppercase;
+    text-align: start;
+  }
+
+  @media (min-width: 43.4375em) {
+    background-image: url(./../../../app/images/desktop/image-hero.jpg);
+    background-size: cover; /* Stretches the image to cover the entire area */
+    background-position: center;
+
+    &__big {
+      width: 500px;
+      margin-right: 150px;
+    }
+
+    &__container {
+      padding: rem(40) rem(20);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      &--hamburger {
+        display: none;
+      }
+
+      &--list {
+        grid-column: 5;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+}
