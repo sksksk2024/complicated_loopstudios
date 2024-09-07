@@ -1,3 +1,5 @@
+Tailwind CSS and the fact I did this on my own, I am so proud !!!
+
 Live at: https://sksksk2024.github.io/complicated_loopstudios/
 # Frontend Mentor - Loopstudios landing page
 
